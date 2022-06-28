@@ -1,0 +1,35 @@
+.dottedbg {
+ text-decoration: overline;
+}
+.bgimage {
+    background-image: url('./images/desktop/image-header.jpg') ;
+    height: 100vh;
+    width: auto; 
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.linkunderline {
+   
+    position: relative;
+}
+.linkunderline::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: aquamarine;
+    top: 120%;
+    left: 0%;
+    transition: background-color 1s ease-in-out 0s;
+    transition: width 0.5s ease 0s;
+}
+.linkunderline:hover:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: crimson;
+    top: 120%;
+    left: 0%;
+}

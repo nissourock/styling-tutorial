@@ -5,6 +5,9 @@ module.exports = {
     "./node_modules/flowbite/**/*.js",
   ],
   theme: {
+	  fontFamily: {
+
+	  },
     extend: {},
     colors: {
 			transparent: 'transparent',
@@ -34,6 +37,14 @@ module.exports = {
 			gray: colors.gray,
 			blueGray: colors.blueGray,
 			coolGray: colors.coolGray,
+			"softRed" : "#FE7867",
+			"YELLOW" : "#FAD400",
+			"darkCyan" : "#25564B",
+			"darkBlue" :"#19536B",
+			"darkCyanF" : "#458C7E",
+			"niceBlue" : "#3ebfff"
+
+
 			
 		},
   },

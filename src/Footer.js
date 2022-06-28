@@ -1,9 +1,10 @@
+import pic from './picfam.jpg'
 const Footer = () => {
   return (
 
     <footer class=" w-screen bottom-0 text-white bg-rose-200">
-      <div class="container pt-9 flex justify-center ">
-        <div class="flex  flex-shrink-0 flex-grow-0 justify-center w-1/3 mb-9">
+      <div class=" pt-9 flex justify-center ">
+        <div class="flex justify-center w-1/3 flex-shrink mb-9">
           <a href="#!" class="mx-auto text-gray-800">
             <svg
               aria-hidden="true"
@@ -91,8 +92,58 @@ const Footer = () => {
             </svg>
           </a>
         </div>
+        
       </div>
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center  p-12 " style={{ 'background-color': 'rgba(0, 0, 0, 0.3)' }}>
+        <div className="flex flex-column  sm:mx-auto ">
+          <ul>
+            <h1 className="text-xl text-green-600 my-3">A propos</h1>
+            <li>Anis</li>
+            <li>Anis</li>
+            <li>Anis</li>
+            <li>Anis</li>
+          </ul>
+        </div>
+        <div className="flex flex-column   sm:mx-auto  ">
+          <ul>
+          <h1 className="text-xl text-green-600 my-3">A propos</h1>
+            <li>Anis</li>
+            <li>Anis</li>
+            <li>Anis</li>
+            <li>Anis</li>
+          </ul>
+        </div>
+        <div className="flex flex-column  sm:mx-auto   ">
+          <ul>
+          <h1 className="text-xl text-green-600 my-3">A propos</h1>
+            <li>Anis</li>
+            <li>Anis</li>
+            <li>Anis</li>
+            <li>Anis</li>
+          </ul>
+        </div>
+        </div>
 
+
+
+<div className="flex flex-col p-10  ">
+    <div className="flex justify-start my-7  bg-rose-400 rounded-lg shadow-2xl overflow-hidden">
+      <img src={pic} className="w-1/2   shadow-lg "></img>
+      <h1 className='mx-20 text-gray-700 flex flex-cols items-center'>HEEEEEEEEY</h1>
+    </div>
+    <div className="flex flex-col justify-center items-center my-7 bg-rose-400 rounded-lg shadow-2xl">
+    <img src={pic} className="w-1/2"></img>
+    <h1 className='mx-20 text-gray-700 '>HEEEEEEEEY</h1>
+    </div>
+    <div className="flex  justify-end my-7 bg-rose-400 rounded-lg shadow-2xl">
+   
+    <h1 className='mx-20 text-gray-700'>HEEEEEEEEY</h1>
+    <img src={pic} className="w-1/2"></img>
+    </div>
+
+
+
+</div>
       <div class="text-center text-gray-700 p-4" style={{ 'background-color': 'rgba(0, 0, 0, 0.2)' }}>
         © 2022 Copyright:
         <a class="text-gray-800" href="https://tailwind-elements.com/"> Anis agency</a>

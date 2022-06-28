@@ -1,11 +1,14 @@
 import Maps from './Maps'
 
 import React from 'react';
+import candybg from './candybg.svg'
 
 const Contact = () => {
+	
     console.log()
     return (
-        <>
+        <div className='bg-repeat' >
+			{/* style={bgstyle} */}
         <section className="flex-1 py-6 bg-rose-100 dark:text-gray-600 ">
 	<div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
 		<div className="py-6 md:py-0 md:px-6">
@@ -63,7 +66,7 @@ const Contact = () => {
 
 
 
-</>
+</div>
     );
 }
 

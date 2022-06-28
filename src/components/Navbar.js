@@ -2,11 +2,17 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import candy from '../candy.svg';
+import Cart from '../Cart'
 import { Link, NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
 const navigation = [
   { name: 'Home', href: '/home', current: true },
   { name: 'Products', href: '/products2', current: false },
   { name: 'Contact', href: '/contact', current: false },
+  { name: 'Blog', href: '/blog', current: false },
+  { name: 'Users', href: '/products3', current: false },
   
 ]
 
@@ -15,6 +21,8 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const cartCount = useSelector((state) => state)
+
   return (
     <Disclosure as="nav" className="bg-current">
       {({ open }) => (
@@ -35,13 +43,13 @@ export default function Navbar() {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end">
                 <div className="flex-shrink-0 flex items-center">
                   <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    className="block lg:hidden h-12 w-auto"
+                    src={candy}
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    className="hidden lg:block h-12 w-auto"
+                    src={candy}
                     alt="Workflow"
                   />
                 </div>
@@ -52,7 +60,7 @@ export default function Navbar() {
                         key={item.name}
                         to={item.href}
                         className={({ isActive }) =>
-                                    (isActive ? "text-rose-400 px-3 py-2 rounded-md text-sm font-medium" : "text-white px-3 py-2 rounded-md text-sm font-medium")}
+                                    (isActive ? "text-rose-400 px-3 py-2 rounded-md text-base font-medium" : "text-gray-700 px-3 py-2 rounded-md text-base font-medium")}
                         // class={classNames(
                         //   item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         //   'px-3 py-2 rounded-md text-sm font-medium'
@@ -62,14 +70,19 @@ export default function Navbar() {
                         {item.name}
                       </NavLink>
                     ))}
+                     <div className='relative'><Cart/>
+               <div className='absolute bottom-8 left-10'>{cartCount.length>0? cartCount.length : ""}</div></div>
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-               
+               <div className='flex flex-col-reverse items-center justify-center '>
+               <div className='relative sm:hidden ml-8'><Cart/>
+               <div className='absolute bottom-8 left-10'>{cartCount.length>0? cartCount.length : ""}</div>
+               </div>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="ml-3 relative">
+                <Menu as="div" className="ml-4 mb-2 relative">
                   <div>
                     <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-800 focus:ring-rose-600">
                       <span className="sr-only">Open user menu</span>
@@ -80,6 +93,7 @@ export default function Navbar() {
                       />
                     </Menu.Button>
                   </div>
+                  
                   <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
@@ -123,6 +137,7 @@ export default function Navbar() {
                     </Menu.Items>
                   </Transition>
                 </Menu>
+                </div>
               </div>
             </div>
           </div>
@@ -135,13 +150,12 @@ export default function Navbar() {
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
-                  )}
+                  className={({ isActive }) => (
+                    isActive ? 'bg-rose-600 text-white block px-3 py-2 rounded-md text-base font-medium' : 'text-gray-700 hover:bg-rose-500 hover:text-white block px-3 py-2 rounded-md text-base font-medium'
+                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
-                    <NavLink to="/contact"></NavLink>
+                    <NavLink to={item.href}></NavLink>
                   {item.name}
                 </Disclosure.Button>
               ))}

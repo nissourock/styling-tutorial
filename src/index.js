@@ -24,6 +24,10 @@ import { Provider } from "react-redux"
 import { store } from "./store/state"
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistStore } from 'redux-persist';
+import Landing from './Landing';
+import Landing2 from './Landing2';
+import Countries, { Allcountries, Countrydetail } from './Countries';
+
 const queryClient = new QueryClient();
 
 
@@ -51,6 +55,16 @@ ReactDOM.render(
               <Route path='/contact' element={<Contact />} />
               <Route path='/checkout' element={<Checkout />} />
               <Route path='/blog' element={<Blog/>}/>
+            </Route>
+            <Route path='/landing' element={<Landing/>}>
+            </Route>
+            <Route path='/landing2' element={<Landing2/>}>
+
+            </Route>
+            <Route path='/countries' element={<Countries/>}>
+              <Route path='/countries/:id' element={<Countrydetail/>}/>
+              <Route path='/countries/' element={<Allcountries/>}/>
+
             </Route>
 
           </Routes>

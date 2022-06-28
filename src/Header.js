@@ -28,7 +28,7 @@ const Header = () => {
             </div>
 
 
-            <nav class="  px-2 sm:px-4 py-2.5 shadow-2xl  ">
+            {/* <nav class="  px-2 sm:px-4 py-2.5 shadow-2xl  ">
                 <div class="container flex  justify-between items-center mx-auto">
                     <div></div>
                     <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-lg
@@ -78,10 +78,11 @@ const Header = () => {
                     </div>
                  
                 </div>
-                <Navbar/>
+                
+            </nav> */}
+            <nav>
+            <Navbar/>
             </nav>
-
-            
         </div>
             
 

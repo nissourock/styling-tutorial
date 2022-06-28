@@ -67,7 +67,7 @@ const Productwrapper2 = () => {
             return (
                 <div className="bg-rose-100 ">
 
-                    <div className="  py-16 px-36 sm:py-24 sm:px-2  lg:px-16 ">
+                    <div className="  py-16 px-6 sm:py-24 sm:px-2  lg:px-16 ">
                         <h2 className="text-5xl  mb-6 lg:ml-10 sm:ml-2 font-extrabold tracking-tight text-gray-900">Products</h2>
                         <h2 className="text-xl  mb-2 lg:ml-10 sm:ml-2 font-bold tracking-tight text-gray-500">Browse {Object.keys(data.products).length} products </h2>
                         <div class=' flex  mt-6 p-10 mb-32 w-full  justify-items-start'>
@@ -124,7 +124,7 @@ const Productwrapper2 = () => {
             return (
                 <div className="bg-rose-100">
 
-                    <div className="  py-16 px-36 sm:py-24 sm:px-2  lg:px-16">
+                    <div className="  py-16 px-6 sm:py-24 sm:px-2  lg:px-16">
                         <h2 className="text-5xl  mb-6 lg:ml-10 sm:ml-2 font-extrabold tracking-tight text-gray-900">Products</h2>
                         <h2 className="text-xl  mb-2 lg:ml-10 sm:ml-2 font-extrabold tracking-tight text-gray-900">Browse {Object.keys(data.products).length} products </h2>
                         <div class=' flex  mt-6 p-10 mb-32 w-full  justify-items-start'>
@@ -175,7 +175,7 @@ const Productwrapper2 = () => {
             return (
                 <div className="bg-rose-100">
 
-                    <div className="  py-16 px-36 sm:py-24 sm:px-2  lg:px-16">
+                    <div className="  py-16 px-6 sm:py-24 sm:px-2  lg:px-16">
                         <h2 className="text-5xl  mb-6 lg:ml-10 sm:ml-2 font-extrabold tracking-tight text-gray-900">Products</h2>
                         <h2 className="text-xl  mb-2 lg:ml-10 sm:ml-2 font-extrabold tracking-tight text-gray-900">Browse {Object.keys(data.products).length} products </h2>
                         <div class=' flex  mt-6 p-10 mb-32 w-full  justify-items-start'>
@@ -227,7 +227,7 @@ const Productwrapper2 = () => {
         return (
             <div className="bg-rose-100">
 
-                <div className="  py-16 px-36 sm:py-24 sm:px-2  lg:px-16">
+                <div className="  py-16 px-6 sm:py-24 sm:px-8  md:px-16">
                     <h2 className="text-5xl  mb-6 lg:ml-10 sm:ml-2 font-extrabold tracking-tight text-gray-900">Products</h2>
                     <h2 className="text-xl  mb-2 lg:ml-10 sm:ml-2 font-extrabold tracking-tight text-gray-900">Browse {Object.keys(data.products).length} products </h2>
                     <div class=' flex  mt-6 p-10 mb-32 w-full  justify-items-start'>
